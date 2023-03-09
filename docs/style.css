@@ -214,19 +214,116 @@ progress {
 /*!*******************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
   \*******************************************************************************************************************************************************************************/
-
+* {
+  font-family: "Noto Sans JP";
+}
 /*!*****************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/App.scss ***!
   \*****************************************************************************************************************************************************************************/
-
+.App {
+  display: flex;
+}
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/compornents/chat/Chat.scss ***!
+  \***********************************************************************************************************************************************************************************************/
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #33363d;
+}
+.chat .chatMessage {
+  flex-grow: 1;
+}
+.chat .chatInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #474b53;
+  border-radius: 5px;
+  margin: 20px;
+  color: lightgray;
+}
+.chat .chatInput form {
+  flex-grow: 1;
+}
+.chat .chatInput form input {
+  padding: 15px;
+  color: white;
+  font-size: large;
+  width: 100%;
+}
+.chat .chatInput form .chatInputButton {
+  display: none;
+}
+.chat .chatInput .chatInputIcons .MuiSvgIcon-root {
+  margin: 5px;
+}
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/compornents/chat/ChatHeader.scss ***!
+  \*****************************************************************************************************************************************************************************************************/
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+}
+.chatHeader .chatHeaderLeft {
+  padding-left: 15px;
+}
+.chatHeader .chatHeaderLeft .chatHeaderHash {
+  color: #7b7c85;
+  padding-right: 7px;
+}
+.chatHeader .chatHeaderLeft h3 {
+  color: white;
+}
+.chatHeader .chatHeaderRight {
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #7b7c85;
+}
+.chatHeader .chatHeaderRight .chatHeaderSearch {
+  display: flex;
+  align-items: center;
+  background-color: #282831;
+  padding: 3px;
+  border-radius: 3px;
+}
+.chatHeader .chatHeaderRight .chatHeaderSearch input {
+  color: white;
+}
+.chatHeader .chatHeaderRight .MuiSvgIcon-root {
+  cursor: pointer;
+}
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/compornents/chat/ChatMessage.scss ***!
+  \******************************************************************************************************************************************************************************************************/
+.message {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: white;
+}
+.message .messageInfo {
+  padding: 20px 20px 20px 10px;
+}
+.message .messageTimeStamp {
+  color: #7b7c85;
+  margin-left: 20px;
+  font-size: 16px;
+}
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/compornents/sidebar/Sidebar.scss ***!
   \*****************************************************************************************************************************************************************************************************/
 .sidebar {
   display: flex;
-  flex: 0.35;
+  flex: 0.3;
   height: 100vh;
-  background-color: #33363d;
 }
 .sidebar .sidebarLeft {
   display: flex;
@@ -255,6 +352,8 @@ progress {
 .sidebar .sidebarRight {
   background-color: #2b2d33;
   width: 300px;
+  position: relative;
+  flex-grow: 1;
 }
 .sidebar .sidebarRight .sidebarTop {
   color: #fff;
@@ -278,6 +377,40 @@ progress {
 }
 .sidebar .sidebarRight .sidebarChannels .sidebarChannelsHeader .sidebarAddIcon {
   cursor: pointer;
+}
+.sidebar .sidebarRight .sidebarFooter {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 93%;
+  padding-bottom: 10px;
+  border-top: 1px solid #686a6e;
+  padding-top: 10px;
+  margin-left: -3px;
+}
+.sidebar .sidebarRight .sidebarFooter .sidebarAccount {
+  display: flex;
+  align-items: center;
+}
+.sidebar .sidebarRight .sidebarFooter .sidebarAccount img {
+  width: 60px;
+}
+.sidebar .sidebarRight .sidebarFooter .sidebarAccount .accountName {
+  margin-left: 5px;
+}
+.sidebar .sidebarRight .sidebarFooter .sidebarAccount .accountName h4 {
+  color: white;
+  font-weight: 500;
+}
+.sidebar .sidebarRight .sidebarFooter .sidebarAccount .accountName span {
+  color: #686a6e;
+}
+.sidebar .sidebarRight .sidebarFooter .sidebarVoice {
+  display: flex;
+  align-items: center;
+  color: #686a6e;
 }
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/compornents/sidebar/SidebarChannel.scss ***!
