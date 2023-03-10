@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --watchAll --verbose",
     "start": "webpack-dev-server --open",
+    "dev": "webpack-dev-server",
     "build": "webpack",
     "lint": "eslint src/*.{ts,tsx}",
     "image": "node imagemin.mjs",
