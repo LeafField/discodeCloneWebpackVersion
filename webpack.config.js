@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 /** @type {import('webpack').Configuration} */
 const config = {
   mode: "production",
-  devtool: "source-map",
+  // devtool: "source-map",
   entry: {
     index: "./src/index.tsx",
   },

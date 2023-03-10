@@ -8,8 +8,7 @@ import { login, logout } from "./features/userSlice";
 import { auth } from "./firebase";
 
 const App = () => {
-  const user = useAppSelecter((state) => state.user);
-
+  const user = useAppSelecter((state) => state.user.user);
   const dispatch = useAppDispatch();
 
   useEffect(() => {

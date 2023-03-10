@@ -53,7 +53,6 @@ const useSubCollection = (
         });
       });
       setSubDocuments(results);
-      console.log(results);
     });
   }, [channelId]);
 
