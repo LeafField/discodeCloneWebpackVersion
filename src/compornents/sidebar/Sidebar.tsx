@@ -8,8 +8,12 @@ import shibainu from "../../images/icon.png";
 import MicIcon from "@mui/icons-material/Mic";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { auth } from "../../firebase";
+import { useAppSelecter } from "../../app/hooks";
 
 const Sidebar = () => {
+  const user = useAppSelecter((state) => state.user);
+
   return (
     <div className="sidebar">
       {/* sidebarleft */}
@@ -46,10 +50,10 @@ const Sidebar = () => {
 
           <div className="sidebarFooter">
             <div className="sidebarAccount">
-              <img src={shibainu} alt="" />
+              <img src={user?.photo} alt="" onClick={() => auth.signOut()} />
               <div className="accountName">
-                <h4>ShinCode</h4>
-                <span>#8162</span>
+                <h4>{user?.displayName}</h4>
+                <span>#{user?.uid.substring(0, 4)}</span>
               </div>
             </div>
 
